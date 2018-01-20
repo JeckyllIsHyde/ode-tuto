@@ -12,18 +12,24 @@
 #include <ode/ode.h>
 #include <drawstuff/drawstuff.h>
 
+dsFunctions fn;
+
 static void simLoop (int pause) {}
 static void start () {}
 
-int main(int argc, char *argv[]) {
-
-  dsFunctions fn;
+void prepDrawStuff() {
   fn.version = DS_VERSION;
   fn.start = &start;
   fn.step = &simLoop;
   fn.command = NULL;
   fn.stop = NULL;
   fn.path_to_textures = "textures";
+}
+
+int main(int argc, char *argv[]) {
+
+  // asign loop functions
+  prepDrawStuff();
 
   // intialize ODE engine
   dInitODE();
