@@ -12,10 +12,6 @@
 #include <ode/ode.h>
 #include <drawstuff/drawstuff.h>
 
-#ifdef dDOUBLE
-#define dsDrawSphere dsDrawSphereD
-#endif
-
 static void simLoop (int pause) {}
 static void start () {}
 
