@@ -14,7 +14,7 @@
 
 static dWorldID world;
 dBodyID ball;
-const dReal radius = 0.2, mass = 1.0;
+const dReal radius = 0.2;
 
 dsFunctions fn;
 
@@ -53,6 +53,7 @@ int main(int argc, char *argv[]) {
   world = dWorldCreate();
   dWorldSetGravity(world, 0.0, 0.0, -0.001);
   // create object
+  const dReal mass = 1.0;
   dReal x0 = 0.0, y0 = 0.0, z0 = 1.0;
   dMass m1;
   ball = dBodyCreate(world);
