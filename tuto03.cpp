@@ -113,8 +113,7 @@ int main(int argc, char *argv[]) {
   // intialize ODE engine
   dInitODE();
   // create world and objects
-  createScene();
-  
+  createScene();  
   // simululation loop
   dsSimulationLoop (argc, argv, 352, 288, &fn);
   // close ODE engine
