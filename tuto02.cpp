@@ -65,6 +65,7 @@ int main(int argc, char *argv[]) {
   // simululation loop
   dsSimulationLoop (argc, argv, 352, 288, &fn);
   // close ODE engine
+  dWorldDestroy(world);
   dCloseODE();
 
   return 0;
